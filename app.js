@@ -1,9 +1,19 @@
 const http = require('http');
 
-const routes = require('./routes.js');
+const express = require('express');
 
-console.log(routes.someText)
+const app = express();
 
-const server = http.createServer(routes.handler)
+app.use((req, res, next) => {
+    console.log('In the middleware');
+    next()   //This allows the request to continue to the next middleware in line
+})
 
-server.listen(3000);
+app.use((req, res, next) => {
+    console.log('In the Another middleware');
+    res.send('<h1>Hello mere golu </h1>');
+})
+
+
+
+app.listen(3000)
