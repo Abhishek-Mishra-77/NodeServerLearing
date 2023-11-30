@@ -80,6 +80,9 @@ main {
   color: rgb(218, 36, 36);
   font-weight: bold;
 }
+.wrong {
+  color: red !important;
+}
 .form-heading h1 {
   color: green;
   font-weight: bold;
