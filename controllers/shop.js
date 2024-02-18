@@ -28,17 +28,6 @@ exports.getProduct = (req, res, next) => {
     .catch((error) => {
       console.log(error)
     })
-  // Product.findByPk(prodId)
-  //   .then((product) => {
-  //     res.render('shop/product-detail', {
-  //       product: product,
-  //       pageTitle: product.title,
-  //       path: '/products'
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error)
-  //   })
 }
 
 
